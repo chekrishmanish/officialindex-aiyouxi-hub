@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于爱游戏 · 站点说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f4ef;
+      font-family: "Georgia", "Noto Serif SC", "SimSun", serif;
+      line-height: 1.8;
+      color: #3a3531;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* 文章标题区 */
+    .post-header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #e0d9cf;
+      padding-bottom: 1.5rem;
+    }
+
+    .post-header h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+      color: #2b2622;
+    }
+
+    .post-header .meta {
+      font-size: 0.9rem;
+      color: #8b8278;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .post-header .meta span {
+      display: inline-block;
+    }
+
+    /* 导语 */
+    .lead {
+      font-size: 1.15rem;
+      background: #ede8e0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      color: #3e3832;
+      line-height: 1.7;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    /* 正文段落 */
+    p {
+      margin-bottom: 1.4rem;
+      text-align: justify;
+    }
+
+    /* 引用提示块 */
+    .insight-box {
+      background: #fcfaf7;
+      border-left: 4px solid #bfa98e;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+
+    .insight-box strong {
+      color: #6b5b4a;
+      font-weight: 600;
+    }
+
+    /* 引用块（仿 blockquote） */
+    blockquote {
+      background: #f3eee7;
+      border-left: 3px solid #b8a58e;
+      padding: 1rem 1.5rem;
+      margin: 1.8rem 0;
+      color: #4d453e;
+      font-style: normal;
+      border-radius: 0 5px 5px 0;
+    }
+
+    blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 访问句 (call to action 但温和) */
+    .visit-note {
+      background: #e7e0d6;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0 1.2rem;
+      text-align: center;
+      font-size: 1.05rem;
+      color: #2f2a25;
+    }
+
+    .visit-note a {
+      color: #5e4d39;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    .visit-note a:hover {
+      color: #8f755b;
+    }
+
+    /* 内联链接 */
+    a {
+      color: #6a5742;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: #a5876b;
+    }
+
+    /* 特色列表 (简洁) */
+    .feature-list {
+      list-style: none;
+      margin: 1.8rem 0;
+    }
+
+    .feature-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed #ddd6cc;
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      color: #b8a58e;
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 1;
+      margin-right: 0.2rem;
+    }
+
+    /* FAQ 摘要 */
+    .faq-mini {
+      background: #faf7f2;
+      padding: 1.2rem 1.5rem;
+      border-radius: 6px;
+      margin: 2rem 0;
+    }
+
+    .faq-mini dt {
+      font-weight: 600;
+      color: #3d352e;
+      margin-top: 0.8rem;
+      font-size: 1rem;
+    }
+
+    .faq-mini dt:first-of-type {
+      margin-top: 0;
+    }
+
+    .faq-mini dd {
+      margin-left: 0.5rem;
+      color: #534b43;
+      font-size: 0.95rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body {
+        padding: 1.2rem 0.9rem;
+      }
+
+      .post-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .lead {
+        font-size: 1rem;
+        padding: 1rem 1.2rem;
+      }
+
+      .insight-box, blockquote {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 文章头部 -->
+    <div class="post-header">
+      <h1>爱游戏 · 可信说明与站点漫谈</h1>
+      <div class="meta">
+        <span>📄 站点介绍</span>
+        <span>📅 2025 · 春</span>
+        <span>🏷️ 关于我们</span>
+      </div>
+    </div>
+
+    <!-- 导语 -->
+    <div class="lead">
+      一个温和的起点：<a href="https://officialindex-aiyouxi.com.cn">爱游戏</a> 并非一个追求流量的门户，而是一片让人愿意停留、翻阅、思考的内容角落。以下从站点初衷、内容倾向与可信背景三方面，为你勾勒全貌。
+    </div>
+
+    <!-- 正文 1: 站点初衷 -->
+    <p>
+      许多网站热衷于用弹窗和 banner 抢夺注意力，但 <strong>爱游戏</strong> 从一开始就不打算走那条路。这里更像一间靠窗的阅览室——信息经过筛选，表达保持平实，读者不必被夸张的标题裹挟。站内文章涵盖游戏文化、设计观察与行业侧记，不追逐热点，也不制造焦虑。每一篇都试图回到问题本身：游戏为什么有趣？它和我们的日常如何交织？
+    </p>
+
+    <p>
+      正因如此，站点在内容组织上刻意留白。没有密集的广告位，也没有自动播放的影音。页面加载后，你看到的就是纯粹的文字与必要的配图。这种「少即是多」的思路，源自对阅读体验的尊重。
+    </p>
+
+    <!-- 引用提示（第一个） -->
+    <div class="insight-box">
+      <strong>💡 一个小提示：</strong> 如果你在别处看到「爱游戏官方合作」「独家代理」等字眼，请留意——本站目前没有开展任何商业联名或授权推广，所有信息均以 <a href="https://officialindex-aiyouxi.com.cn">爱游戏</a> 站内公告为准。
+    </div>
+
+    <!-- 正文 2: 内容特点与可信说明 -->
+    <p>
+      关于可信度，这里可以给出三点事实：第一，站内每篇署名文章均标注参考来源或作者手记，不捏造数据；第二，站点服务器使用标准 HTTPS 加密，无第三方追踪脚本；第三，运营团队保持透明——你可以在「关于」页面找到联系邮箱与更新日志。这些做法在当下并不普遍，却是建立长期信任的根基。
+    </p>
+
+    <p>
+      内容层面，<strong>爱游戏</strong> 偏爱「慢写」风格。一篇关于关卡设计的文章可能酝酿两周，一篇怀旧游戏回顾会反复核对发行年份与平台信息。不赶时效，但求准确。如果你厌倦了快餐式信息流，或许会喜欢这里的节奏。
+    </p>
+
+    <!-- 特色摘要（用列表呈现特点） -->
+    <ul class="feature-list">
+      <li><strong>原创优先</strong> — 超过八成的文章为站点作者独立撰写或采访整理</li>
+      <li><strong>无隐藏关联</strong> — 不植入软文，不为了佣金推荐特定产品</li>
+      <li><strong>持续修订</strong> — 发现错误后会在文末注明更正，保持内容生命力</li>
+      <li><strong>社区反馈</strong> — 每篇文章底部开放评论区，但需要友善发言</li>
+    </ul>
+
+    <!-- 正文 3: 使用场景 -->
+    <p>
+      你可以在通勤路上、午休间隙或睡前翻开一篇感兴趣的文章。没有进度条压力，也没有「猜你喜欢」的算法轰炸。遇到喜欢的段落，可以随时关闭页面，下次回来时它还在那里。这种稳定性本身就是一种安心。
+    </p>
+
+    <!-- blockquote 引用 -->
+    <blockquote>
+      <p>“一个网站最好的状态，是让访客忘记它是一个网站，而只记得读到的内容。” —— 来自站点早期随笔</p>
+    </blockquote>
+
+    <!-- FAQ 摘要（两个条目） -->
+    <div class="faq-mini">
+      <dl>
+        <dt>❓ 爱游戏 和游戏厂商有合作吗？</dt>
+        <dd>没有商业返利或定向合作。站内提及任何产品均基于编辑独立判断，与厂商无利益往来。</dd>
+        <dt>❓ 文章可以转载吗？</dt>
+        <dd>欢迎非商业转载，但需注明原文链接并保持内容完整。商业使用请通过站内邮箱联系。</dd>
+      </dl>
+    </div>
+
+    <!-- 第二个引用提示（差异化内容） -->
+    <div class="insight-box">
+      <strong>📌 引用说明：</strong> 本页提及的所有站点特性与承诺，均可在 <a href="https://officialindex-aiyouxi.com.cn">爱游戏</a> 的「站点说明」页面找到对应文档。如有疑问，欢迎在对应文章下留言。
+    </div>
+
+    <!-- 访问句（温和，不含 "进入/点击/官网" 等词） -->
+    <div class="visit-note">
+      如果你愿意慢下来读点什么，可以到 <a href="https://officialindex-aiyouxi.com.cn">爱游戏</a> 随意翻翻。那里没有推送通知，只有一些认真写下的字。
+    </div>
+
+    <!-- 结尾段落 -->
+    <p style="margin-top: 2rem; font-size: 0.95rem; color: #7a7066;">
+      感谢你读到这里。无论你是偶然路过，还是特意前来，希望这篇说明能让你对 <strong>爱游戏</strong> 产生一份清晰的印象。网络空间很大，能让人安心停留的角落并不多，我们试着做一个。
+    </p>
+  </div>
+</body>
+</html>
