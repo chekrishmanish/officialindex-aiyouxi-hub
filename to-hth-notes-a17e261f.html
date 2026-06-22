@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>从一处角落开始 · hth</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f9f8f6;
+      color: #1e1c19;
+      line-height: 1.7;
+      font-size: 1rem;
+      padding: 0 1.5rem;
+    }
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 4rem 0 5rem;
+    }
+    /* 开场短句，轻微留白节奏 */
+    .opening {
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+      color: #3d3a34;
+      margin-bottom: 1.8rem;
+      font-weight: 340;
+      line-height: 1.65;
+      border-left: 2px solid #b7ad9c;
+      padding-left: 1.5rem;
+    }
+    .opening em {
+      font-style: normal;
+      font-weight: 440;
+      color: #a0774a;
+    }
+    .title-block {
+      margin: 2.8rem 0 1.2rem;
+    }
+    .title-block h1 {
+      font-weight: 420;
+      font-size: 2.2rem;
+      letter-spacing: -0.01em;
+      color: #26221c;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+    .title-block .sub {
+      font-size: 1rem;
+      color: #827a6c;
+      font-weight: 340;
+      border-bottom: 1px solid #ded9cf;
+      padding-bottom: 0.8rem;
+      margin-top: 0.1rem;
+    }
+    .intro-text {
+      margin: 2rem 0 2.4rem;
+      color: #332e27;
+      font-weight: 360;
+    }
+    .intro-text p {
+      margin-bottom: 1.4rem;
+    }
+    .intro-text a {
+      color: #8b6f4b;
+      text-decoration: none;
+      border-bottom: 1px solid #d6cbbc;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .intro-text a:hover {
+      border-bottom-color: #6a4f2f;
+      color: #6a4f2f;
+    }
+    .feature-list {
+      margin: 2.8rem 0 2.5rem;
+    }
+    .feature-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-start;
+    }
+    .feature-marker {
+      flex-shrink: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: #ede7dc;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #6d5e48;
+      font-weight: 400;
+      margin-top: 0.2rem;
+    }
+    .feature-content {
+      flex: 1;
+    }
+    .feature-content strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      color: #2f2a22;
+      font-size: 1.05rem;
+    }
+    .feature-content span {
+      color: #4f483d;
+      font-weight: 350;
+      font-size: 0.95rem;
+    }
+    .bridge {
+      background: #f2efe8;
+      padding: 1.8rem 1.8rem 2rem;
+      border-radius: 16px;
+      margin: 2.2rem 0 2.8rem;
+    }
+    .bridge p {
+      font-weight: 350;
+      color: #3b352b;
+      margin-bottom: 0.75rem;
+    }
+    .bridge p:last-child {
+      margin-bottom: 0;
+    }
+    .bridge .soft-link {
+      color: #7c6544;
+      text-decoration: none;
+      border-bottom: 1px solid #cbbca7;
+      transition: 0.2s;
+    }
+    .bridge .soft-link:hover {
+      border-bottom-color: #5d4a2e;
+      color: #5d4a2e;
+    }
+    .closing {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd6c9;
+      padding-top: 2rem;
+      font-size: 0.95rem;
+      color: #5b5346;
+      font-weight: 350;
+      letter-spacing: 0.01em;
+    }
+    .closing p {
+      margin-bottom: 0.6rem;
+    }
+    .closing strong {
+      font-weight: 440;
+      color: #3c3529;
+    }
+    /* 响应式 */
+    @media (max-width: 500px) {
+      .page { padding: 2.5rem 0 3.5rem; }
+      .title-block h1 { font-size: 1.8rem; }
+      .opening { font-size: 1rem; padding-left: 1rem; }
+      .bridge { padding: 1.3rem; }
+      .feature-item { gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="opening">
+      有些名字，第一次遇见便觉得背后藏着故事。<br>
+      它们像深秋的巷口，安静，却引人驻足。
+    </div>
+
+    <div class="title-block">
+      <h1>hth</h1>
+      <div class="sub">三个字母，一段自然生长的叙述</div>
+    </div>
+
+    <div class="intro-text">
+      <p>
+        你或许已经见过这三个字母——在浏览器的标签栏，在一段笔记的角落，或是某个深夜搜索时的偶然一瞥。它们不是生硬的缩写，更像一个朴素的坐标，标记着一片有温度的数字角落。关于<a href="https://to-hth.com">hth</a>，你可以把它理解成一个安静的起点：不喧哗，不追逐，只是持续地存在着，为那些愿意慢下来的人提供一些可以阅读、可以思考的内容。
+      </p>
+      <p>
+        这里没有浮夸的标语，也没有紧迫的倒计时。有的只是被耐心梳理过的信息、平实的观察，以及一点点不被时间冲淡的诚恳。如果你恰好路过，不妨停下来看一看——有时候，最简单的三个字母，反而承载着最完整的表达。
+      </p>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-marker">·</div>
+        <div class="feature-content">
+          <strong>克制的结构</strong>
+          <span>页面不堆砌，内容有呼吸的空间。每一个段落都经过取舍，只保留真正值得一读的部分。</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-marker">·</div>
+        <div class="feature-content">
+          <strong>温暖的实用主义</strong>
+          <span>不贩卖焦虑，也不故作高深。信息以温和的方式呈现，让浏览成为一种放松，而非负担。</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-marker">·</div>
+        <div class="feature-content">
+          <strong>持久的陪伴感</strong>
+          <span>与那些转瞬即逝的页面不同，这里的内容更像是书架上的一本旧书——你随时可以翻开，总能找到熟悉的平静。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bridge">
+      <p>三个字母的组合有无数种可能，但<strong>hth</strong>选择了其中一条路：做一个安静、可靠、不打扰的角落。</p>
+      <p>如果你想亲自感受这种节奏，可以顺着<a href="https://to-hth.com" class="soft-link">hth</a>的名字走过去。那里没有入口的仪式感，只有一段等待被你发现的叙述。</p>
+    </div>
+
+    <div class="closing">
+      <p>一个网站最动人的地方，往往不是它宣称自己是什么，而是它<strong>真正成为了什么</strong>。</p>
+      <p>对于 hth 而言，它正在成为那个让文字和想法自由停留的地方。不着急，也不拥挤。</p>
+      <p style="margin-top:1.2rem; font-size:0.9rem; color:#7d745f;">—— 慢慢地读，慢慢地写，慢慢地相遇。</p>
+    </div>
+  </div>
+</body>
+</html>
