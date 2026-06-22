@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hth · 稳定入口与页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #1f2a3a;
+      line-height: 1.6;
+    }
+
+    /* hero 区 - 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #0d1b2a 0%, #1b2838 50%, #14212f 100%);
+      color: #eef2f5;
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #f7f9fc;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #ffb347;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 720px;
+      margin: 1.2rem auto 2.6rem;
+      opacity: 0.85;
+      font-weight: 350;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.5rem 1.8rem;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      color: #cfdbe5;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* 优势区 (卡片) */
+    .advantage-section {
+      max-width: 1200px;
+      margin: -1rem auto 0;
+      padding: 3rem 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.6rem;
+      box-shadow: 0 8px 24px rgba(0, 20, 30, 0.06);
+      transition: box-shadow 0.2s, transform 0.2s;
+      border: 1px solid #e7ecf2;
+    }
+
+    .card:hover {
+      box-shadow: 0 14px 32px rgba(0, 20, 30, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 580;
+      margin-bottom: 0.4rem;
+      color: #0a1b2e;
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: #37485e;
+      font-size: 0.98rem;
+    }
+
+    /* 说明区 (场景+提示) */
+    .detail-section {
+      max-width: 1100px;
+      margin: 1.5rem auto 2rem;
+      padding: 2.5rem 2rem;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      border: 1px solid #ecf0f5;
+    }
+
+    .detail-section h2 {
+      font-size: 2rem;
+      font-weight: 550;
+      margin-bottom: 0.5rem;
+      color: #0d1b2a;
+    }
+
+    .detail-section h2 small {
+      font-size: 1rem;
+      font-weight: 350;
+      color: #5e738c;
+      margin-left: 0.8rem;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0 1.2rem;
+    }
+
+    .detail-item {
+      padding: 0.2rem 0;
+    }
+
+    .detail-item h4 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #1e3146;
+    }
+
+    .detail-item p {
+      color: #364a62;
+    }
+
+    .tip-box {
+      background: #f0f4fa;
+      border-left: 4px solid #ffb347;
+      padding: 1.2rem 1.6rem;
+      border-radius: 14px;
+      margin-top: 1.8rem;
+    }
+
+    .tip-box strong {
+      color: #0d1b2a;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 2rem 2rem 2.4rem;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      border: 1px solid #ecf0f5;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.8rem;
+      font-weight: 550;
+      color: #0d1b2a;
+      margin-bottom: 1.6rem;
+    }
+
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #e2e9f0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      color: #1f2a3a;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      color: #445b74;
+    }
+
+    .faq-more {
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+      color: #536a84;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      max-width: 1100px;
+      margin: 0 auto 3.5rem;
+      padding: 1.8rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 28px;
+      border: 1px solid #eef3f8;
+    }
+
+    .footer-links .left a {
+      color: #1f5180;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.15s;
+    }
+
+    .footer-links .left a:hover {
+      border-bottom-color: #1f5180;
+    }
+
+    .footer-links .right {
+      display: flex;
+      gap: 2rem;
+      color: #4a607a;
+      font-size: 0.9rem;
+    }
+
+    .footer-links .right a {
+      color: #4a607a;
+      text-decoration: none;
+    }
+
+    .footer-links .right a:hover {
+      color: #1f5180;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 780px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero {
+        padding: 4rem 1.2rem 4rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .advantage-section {
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+      }
+    }
+
+    /* 强调色用于链接 —— 全局 a 标签颜色 */
+    a {
+      color: #1f5180;
+    }
+
+    a:hover {
+      color: #e6842e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- hero 区 -->
+  <section class="hero">
+    <h1><span>hth</span> · 可依赖的访问节点</h1>
+    <p>稳定的页面入口，清晰的结构说明，为日常信息检索与资源定位提供持续可靠的路径。</p>
+    <div class="tagline">简洁 · 稳定 · 直达</div>
+  </section>
+
+  <!-- 优势区 (卡片) -->
+  <div class="advantage-section">
+    <div class="card">
+      <span class="icon">📡</span>
+      <h3>稳固接入</h3>
+      <p>底层链路经过持续维护，降低偶然中断对使用流程的影响。多路径冗余设计，提升整体可用性。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🧭</span>
+      <h3>结构说明</h3>
+      <p>页面功能分区清晰，从导航到信息层级均经过梳理，减少额外跳转与搜索成本。</p>
+    </div>
+    <div class="card">
+      <span class="icon">⚙️</span>
+      <h3>低噪环境</h3>
+      <p>避免冗余弹窗与过度加载，内容区块保持轻量化，专注有效信息的传递。</p>
+    </div>
+  </div>
+
+  <!-- 说明区 (场景+提示) -->
+  <section class="detail-section">
+    <h2>适用场景与页面说明 <small>稳定入口说明</small></h2>
+    <div class="detail-grid">
+      <div class="detail-item">
+        <h4>日常浏览与回访</h4>
+        <p>将 <a href="https://com-hth.com">hth</a> 作为固定入口，减少频繁变更书签或记忆多个地址的负担。适合长期需要稳定访问特定资源的用户。</p>
+      </div>
+      <div class="detail-item">
+        <h4>信息整合与分发</h4>
+        <p>页面内容围绕核心功能进行归纳，无论是个人使用还是小范围分享，都可以通过统一链接降低沟通成本。简洁的布局使新访客快速理解用途。</p>
+      </div>
+    </div>
+    <div class="tip-box">
+      <strong>提示：</strong> 建议将 <a href="https://com-hth.com">hth</a> 添加至浏览器收藏夹或启动页，以保持访问路径的一致性。页面结构偶尔会进行微调，但核心入口与功能模块保持稳定。
+    </div>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section class="faq-summary">
+    <h2>常见问题摘要</h2>
+    <div class="faq-item">
+      <strong>页面加载异常或响应慢怎么办？</strong>
+      <p>首先检查本地网络与 DNS 设置。若持续异常，可稍后重试或通过页面底部的联系方式反馈。我们建议优先使用 <a href="https://com-hth.com">hth</a> 主域名访问。</p>
+    </div>
+    <div class="faq-item">
+      <strong>是否支持移动设备访问？</strong>
+      <p>页面采用响应式设计，在手机和平板设备上均可正常阅读与操作。功能区域会根据屏幕尺寸自适应调整。</p>
+    </div>
+    <div class="faq-item">
+      <strong>内容多久更新一次？</strong>
+      <p>说明类与 FAQ 部分按需更新；页面入口与结构保持长期稳定。若有重大调整会通过页内通知或 changelog 说明。</p>
+    </div>
+    <div class="faq-more">
+      更多帮助信息，请浏览页面底部相关链接。
+    </div>
+  </section>
+
+  <!-- 底部链接 -->
+  <footer class="footer-links">
+    <div class="left">
+      <span>稳定入口：</span> <a href="https://com-hth.com">hth</a>
+    </div>
+    <div class="right">
+      <a href="#">使用指引</a>
+      <a href="#">状态更新</a>
+      <a href="#">联系方式</a>
+    </div>
+  </footer>
+
+</body>
+</html>
