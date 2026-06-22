@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · hth 访问说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafbfc;
+      color: #1f2937;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* 顶部导航 */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0 1.5rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 3rem;
+    }
+
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: #111827;
+    }
+
+    .nav-link {
+      color: #3b82f6;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+
+    .nav-link:hover {
+      background: #eff6ff;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #374151;
+      max-width: 640px;
+    }
+
+    .highlight {
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    /* 通用章节 */
+    .section {
+      margin-bottom: 2.8rem;
+    }
+
+    .section h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #111827;
+      letter-spacing: -0.01em;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 三个场景卡片 */
+    .scenes {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border: 1px solid #e9eef2;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .scene-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #0f172a;
+    }
+
+    .scene-card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 0;
+    }
+
+    .scene-card .tag {
+      display: inline-block;
+      background: #f0f4ff;
+      color: #2563eb;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* 提示区块 */
+    .note {
+      background: #f8fafc;
+      border-left: 3px solid #3b82f6;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+
+    .note p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #1e293b;
+    }
+
+    /* 常见说明 (简易FAQ) */
+    .faq-item {
+      border-bottom: 1px solid #edf2f7;
+      padding: 0.9rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #0f172a;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-answer {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    /* 页脚 */
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.85rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* 链接嵌入 */
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px dotted #b7d0f7;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #1e40af;
+      border-bottom: 1px solid #1e40af;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .scene-card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 导航 -->
+    <nav class="nav">
+      <span class="nav-brand">指南·hth</span>
+      <a href="https://app1-hth.com" class="nav-link">hth</a>
+    </nav>
+
+    <!-- hero -->
+    <div class="hero">
+      <h1>关于 hth 的简明指南<br>与访问提醒</h1>
+      <p>无论你初次接触或是频繁使用，了解平台的基本逻辑和常见环境限制，能帮你更顺畅地完成操作。本篇从实用角度出发，整理了几个关键信息。</p>
+    </div>
+
+    <!-- 介绍: 简明说明 -->
+    <div class="section">
+      <h2>它是什么</h2>
+      <p>
+        <strong>hth</strong> 是一个面向特定场景的轻量工具平台。其核心设计围绕任务流与信息管理展开，强调低延迟与模块化组合。你可以将它看作一个“可配置的中转层”——用于处理数据筛选、状态同步或轻量协作。无需复杂部署，通过浏览器即可访问主要功能。
+      </p>
+      <p>
+        如果你希望直接体验，可以前往 <a href="https://app1-hth.com">hth</a> 的主页了解当前版本提供的模块列表。下文还会补充一些常见的使用场景与访问注意事项。
+      </p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="section">
+      <h2>三个典型场景</h2>
+      <div class="scenes">
+        <div class="scene-card">
+          <span class="tag">场景一</span>
+          <h3>快速查阅与筛选</h3>
+          <p>当面对多源数据时，利用 <strong>hth</strong> 的过滤和标记功能，可以在一个视图内完成横向对比，减少反复切换标签页的损耗。适合运营或支持角色每日晨间检查。</p>
+        </div>
+        <div class="scene-card">
+          <span class="tag">场景二</span>
+          <h3>状态变更提醒</h3>
+          <p>通过配置简单的触发规则，平台可以在关键节点推送轻通知。例如订单状态更新、阈值超出或成员提交内容。无需安装额外客户端，浏览器通知即可覆盖。</p>
+        </div>
+        <div class="scene-card">
+          <span class="tag">场景三</span>
+          <h3>临时协作白板</h3>
+          <p>团队可以将 <strong>hth</strong> 的共享视图作为信息锚点，用于远程同步时统一参考。尤其适合短周期项目中的每日站会，避免信息散落在聊天记录中。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 访问提醒 / 说明 -->
+    <div class="section">
+      <h2>访问提醒</h2>
+      <p>由于平台依赖浏览器本地缓存与 WebSocket 长连接，以下环境因素可能影响体验：</p>
+      <ul style="padding-left: 1.4rem; color: #374151; margin-bottom: 1rem;">
+        <li>请确保浏览器允许弹出窗口及第三方 Cookie（部分功能使用 iframe 嵌入）。</li>
+        <li>如使用公司内网或 VPN，请确认 443 及 8080 端口未被策略封锁。</li>
+        <li>建议每月清理一次站点缓存，以防旧版本脚本冲突。</li>
+      </ul>
+      <div class="note">
+        <p>📌 如果页面长时间白屏或按钮无响应，请尝试刷新或使用 Chrome / Edge 最新稳定版。部分旧版 Safari 可能存在样式偏移。</p>
+      </div>
+    </div>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <div class="section">
+      <h2>常见说明</h2>
+      <div class="faq-item">
+        <div class="faq-question">是否需要注册账号？</div>
+        <div class="faq-answer">当前公开版本无需注册，进入 <a href="https://app1-hth.com">hth</a> 后可直接体验演示模块。部分高级功能可能在未来引入身份绑定。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">数据会持久化保存吗？</div>
+        <div class="faq-answer">所有操作数据默认仅保存在浏览器本地，关闭标签页后临时记录将清除。如需长期留存，建议使用导出功能或自行对接后端存储。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">移动端支持程度如何？</div>
+        <div class="faq-answer">已针对手机竖屏做了基础适配，但复杂筛选表格在窄屏下仍建议横屏使用。功能完整性以桌面端为优先。</div>
+      </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <p>本页面仅为介绍说明，所有功能以实际版本为准。如有疑问，可参照平台内置帮助面板。</p>
+    </footer>
+  </div>
+</body>
+</html>
